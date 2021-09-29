@@ -12,7 +12,7 @@
 		@apply border rounded transition font-semibold;
 	}
 	.primary {
-		@apply text-white border border-purple-500 bg-purple-500 hover:border-purple-700 hover:bg-purple-700;
+		@apply text-white border border-indigo-500 bg-indigo-500 hover:border-indigo-700 hover:bg-indigo-700;
 	}
 	.secondary {
 		@apply border border-gray-500 hover:bg-gray-500 hover:text-white;

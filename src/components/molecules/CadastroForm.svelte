@@ -6,13 +6,13 @@
 
 <FormContainer>
 	<form name="login form" on:submit|preventDefault={() => {}}>
-		<label for="login form">Entre com seu e-mail e senha:</label>
+		<label for="login form">Cadastre-se com seu e-mail e senha:</label>
 		<InputText placeholder="E-mail" />
 		<InputText placeholder="Senha" />
-		<Button style="primary">Entrar</Button>
+		<Button style="primary">Cadastrar</Button>
 	</form>
 </FormContainer>
-<p>Ainda não tem uma conta? <a href="/cadastro"> Faça seu cadastro</a></p>
+<p>Já tem uma conta? <a href="/login"> Faça seu login</a></p>
 
 <style lang="postcss">
 	form {

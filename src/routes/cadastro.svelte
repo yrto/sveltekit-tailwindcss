@@ -1,8 +1,8 @@
 <script lang="ts">
-	import LoginForm from '../components/molecules/LoginForm.svelte';
+	import CadastroForm from '../components/molecules/CadastroForm.svelte';
 	import FormPage from '../components/templates/FormPage.svelte';
 </script>
 
 <FormPage>
-	<LoginForm />
+	<CadastroForm />
 </FormPage>
