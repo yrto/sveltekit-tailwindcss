@@ -1,9 +1,8 @@
 <script lang="ts">
-	export let type: 'text' | 'email' | 'password' = 'text';
 	export let placeholder: string;
 </script>
 
-<input {type} {placeholder} />
+<input type="password" {placeholder} />
 
 <style lang="postcss">
 	input {
