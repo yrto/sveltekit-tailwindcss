@@ -1,6 +1,6 @@
 <script lang="ts">
-	import CadastroForm from '../components/molecules/CadastroForm.svelte';
-	import FormPage from '../components/templates/FormPage.svelte';
+	import CadastroForm from '$lib/components/organisms/CadastroForm.svelte';
+	import FormPage from '$lib/components/pages/FormPage.svelte';
 </script>
 
 <FormPage>

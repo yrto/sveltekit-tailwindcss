@@ -7,9 +7,10 @@
 
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <br />
-<p>
-	<a href="/login">Login</a>
-	<a href="/cadastro">Cadastro</a>
-</p>
+<ul>
+	<li><a href="/login">Login</a></li>
+	<li><a href="/cadastro">Cadastro</a></li>
+	<li><a href="/produtos">Produtos</a></li>
+</ul>
 
 {#if false}<slot />{/if}

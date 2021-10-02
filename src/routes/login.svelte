@@ -1,6 +1,6 @@
 <script lang="ts">
-	import LoginForm from '../components/molecules/LoginForm.svelte';
-	import FormPage from '../components/templates/FormPage.svelte';
+	import LoginForm from '$lib/components/organisms/LoginForm.svelte';
+	import FormPage from '$lib/components/pages/FormPage.svelte';
 </script>
 
 <FormPage>

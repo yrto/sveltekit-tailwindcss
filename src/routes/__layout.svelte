@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
-	import Header from '../components/organisms/Header.svelte';
+	import Header from '../lib/components/organisms/Header.svelte';
 </script>
 
 <Header />

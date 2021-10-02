@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import Logo from '../atoms/Logo.svelte';
+	import { Logo } from '$lib/components/atoms';
 </script>
 
 <header>
