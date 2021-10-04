@@ -7,7 +7,7 @@ import {
 	getDocs,
 	onSnapshot
 } from 'firebase/firestore';
-import type { Unsubscribe, DocumentData } from 'firebase/firestore';
+import type { Unsubscribe, DocumentData, QuerySnapshot } from 'firebase/firestore';
 import type { productModel } from '../models/product';
 
 let db = null;
@@ -53,8 +53,7 @@ export const getAllUsers = async (): Promise<void> => {
 	});
 };
 
-export const getDocsFromCollection = async (collectionName: string): Promise<productModel[]> => {
-	const docs = await getDocs(collection(getDb(), collectionName));
+export const getDataFromDocs = (docs: QuerySnapshot): productModel[] => {
 	let docsData = [];
 	docs.forEach((doc) => {
 		docsData = [...docsData, doc.data()];
@@ -62,9 +61,14 @@ export const getDocsFromCollection = async (collectionName: string): Promise<pro
 	return docsData;
 };
 
+export const getDocsFromCollection = async (collectionName: string): Promise<productModel[]> => {
+	const docs = await getDocs(collection(getDb(), collectionName));
+	return getDataFromDocs(docs);
+};
+
 export const listenToCollection = (
 	collectionName: string,
-	callback: (snapshot: DocumentData) => void
+	callback: (snapshot: QuerySnapshot) => void
 ): Unsubscribe => {
 	return onSnapshot(collection(getDb(), collectionName), callback);
 };

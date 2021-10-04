@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
 	import type { productModel } from '$lib/models/product';
-	import { addDocToCollection, getDocsFromCollection } from '$lib/database';
+	import { addDocToCollection, listenToCollection, getDataFromDocs } from '$lib/database';
 	import { ButtonSubmit, InputText, InputNumber } from '$lib/components/atoms';
 
 	let product: productModel = {
@@ -19,8 +19,10 @@
 
 	let unsub = () => {};
 
-	onMount(async () => {
-		products = await getDocsFromCollection('products');
+	onMount(() => {
+		unsub = listenToCollection('products', (data) => {
+			products = getDataFromDocs(data);
+		});
 	});
 
 	onDestroy(() => unsub());
