@@ -7,7 +7,7 @@ import {
 	getDocs,
 	onSnapshot
 } from 'firebase/firestore';
-import type { Unsubscribe, DocumentData, QuerySnapshot } from 'firebase/firestore';
+import type { Unsubscribe, QuerySnapshot } from 'firebase/firestore';
 import type { productModel } from '../models/product';
 
 let db = null;
@@ -15,8 +15,6 @@ const getDb = (): Firestore => {
 	if (!db) db = getFirestore();
 	return db;
 };
-
-// const db = getFirestore(app);
 
 export const addUser = async (): Promise<void> => {
 	try {

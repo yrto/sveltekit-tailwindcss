@@ -3,7 +3,7 @@ const config = {
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		fontFamily: {
-			// sans: ['Inter', 'sans-serif']
+			sans: ['Inter', 'sans-serif']
 			// serif: ['Merriweather', 'serif'],
 		},
 		extend: {}
