@@ -1,27 +1,26 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { Logo } from '$lib/components/atoms';
+	import { RollingBrand } from '$lib/components/atoms';
+	import LoginMenu from '$lib/components/molecules/LoginMenu.svelte';
 </script>
 
 <header>
 	<div class="header-container">
 		<button on:click={() => goto('/')} aria-label="home" type="button" class="class-logo">
-			<Logo />
-			<div>
-				SUPER<strong>LEVEL</strong>
-			</div>
+			<RollingBrand />
 		</button>
+		<LoginMenu />
 	</div>
 </header>
 
 <style lang="postcss">
 	header {
-		@apply bg-white border-b sticky top-0 py-6;
+		@apply bg-black border-b border-gray-700 sticky top-0 py-6;
 	}
 	.header-container {
-		@apply flex max-w-5xl mx-auto px-6;
+		@apply flex justify-between max-w-5xl mx-auto px-6;
 	}
 	.class-logo {
-		@apply flex m-[-0.5em] gap-2;
+		@apply mx-[-0.75em] p-3;
 	}
 </style>

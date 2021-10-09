@@ -1,6 +1,7 @@
 // brand
 
 export { default as Logo } from './brand/Logo.svelte';
+export { default as RollingBrand } from './brand/RollingBrand.svelte';
 
 // button
 

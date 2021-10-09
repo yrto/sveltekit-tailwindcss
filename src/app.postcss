@@ -1,24 +1,19 @@
 /* Write your global styles here, in PostCSS syntax */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  @apply bg-gray-100 text-gray-700;
+  @apply bg-black text-white;
 }
 
 a {
   @apply underline hover:no-underline;
 }
 
-button,
 input {
-  @apply p-2;
-}
-
-input {
-  @apply border rounded shadow-inner;
+  @apply border rounded shadow-inner bg-transparent;
 }

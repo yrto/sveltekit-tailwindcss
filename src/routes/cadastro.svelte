@@ -13,7 +13,7 @@
 
 <style lang="postcss">
 	h1 {
-		@apply text-2xl mb-6 font-bold;
+		@apply text-2xl mb-6 font-semibold;
 	}
 	p {
 		@apply text-sm text-center mt-6 text-gray-400;
